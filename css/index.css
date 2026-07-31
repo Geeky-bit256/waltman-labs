@@ -1,0 +1,403 @@
+
+/*======================================
+        GOOGLE FONT
+======================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/*======================================
+            RESET
+======================================*/
+
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#080808;
+  color:white;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+  
+}
+section {
+  border: 1px solid red;
+}
+.container{
+  border: 1px solid white;
+  width:min(1200px,90%);
+  margin:auto;
+}
+/*======================================
+            HEADER
+======================================*/
+
+
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(7,7,7,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #171717;
+}
+
+.logo {
+  height: 80px;
+} 
+
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+
+nav{
+  display:flex;
+  gap:35px;
+
+}
+
+nav a{
+  color:#9d9d9d;
+  transition:.3s;
+
+}
+
+nav a:hover, nav a.active{
+  color:#fff;
+
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#5b8cff;
+  color:#fff;
+  padding:15px 24px;
+  border-radius:14px;
+  font-weight:600;
+  transition:.3s;
+
+}
+
+.hero {
+  border: 1px solid white;
+  padding: 90px 0px;
+}
+
+.content-grid{
+  border: 1px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.hero h1{
+    margin:20px 0;
+    font-size:clamp(40px,6vw,72px);
+    line-height:1.05;
+    
+}
+
+.hero p{
+    color:#bdbdbd;
+    line-height:1.8;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.buttons a{
+  text-decoration:none;
+  padding:16px 28px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.primary{
+    background:#4f6cff;
+    color:white;
+}
+
+.secondary{
+    border:1px solid #444;
+    color:white;
+}
+
+.features{
+  display:flex;
+  gap:40px;
+  margin-top:70px;
+  flex-wrap:wrap;
+}
+
+.features h3{
+  color:#4f6cff;
+  margin-bottom:8px;
+}
+
+.features span{
+  color:#bdbdbd;
+}
+
+.image{
+  display:flex;
+  justify-content:center;
+}
+
+.image img{
+  width:100%;
+  max-width:700px;
+  object-fit:contain;
+}
+
+.recent-projects {
+  padding: 40px 0px;
+}
+
+.section-heading {
+  text-align: center;
+}
+
+.section-heading p {
+  color:#bdbdbd;
+  font-size:18px;
+  margin: 24px 0px;
+}
+
+.recent-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.project-card{
+  background:#101010;
+  border:1px solid #202020;
+  border-radius:22px;
+  overflow:hidden;
+  transition:.35s;
+  display:flex;
+  flex-direction:column;
+
+}
+
+.project-card:hover {
+  transform:translateY(-10px);
+  border-color:#5b8cff;
+  box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+.project-card img{
+  height:240px;
+  object-fit:cover;
+  transition:.45s;
+}
+
+.project-card:hover img{
+  transform:scale(1.05);
+}
+
+.project-content{
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  /*What is the flex purpose?*/
+  flex:1;
+}
+.tag{
+  display:inline-block;
+  width:max-content;
+  background:rgba(91,140,255,.12);
+  color:#5b8cff;
+  border:1px solid rgba(91,140,255,.3);
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:600;
+  margin-bottom:18px;
+
+}
+
+.project-content h2{
+  font-size:1.5rem;
+  margin-bottom:14px;
+
+}
+
+.project-content p{
+  color:#ababab;
+  line-height:1.8;
+  margin-bottom:28px;
+  
+  /*Why flex ?*/
+  flex:1;
+
+}
+
+/*======================================
+        PROJECT FOOTER
+======================================*/
+
+.project-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px; /*what is gap for?*/
+  border-top:1px solid #202020;
+  padding-top:20px;
+}
+
+.project-footer small{
+  display:block;
+  color:#7f7f7f;
+  margin-bottom:6px;
+
+}
+
+.project-footer h4{
+  font-size:1rem;
+  font-weight:600;
+}
+
+.project-footer a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#5b8cff;
+  font-weight:600;
+  transition:.3s;
+}
+
+.project-footer a:hover{
+  gap:15px;
+}
+
+.project-footer i{
+  font-size:.9rem;
+}
+
+.view-more-projects {
+  border: 1px solid white;
+  padding: 28px;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.view-more-projects a {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#5b8cff;
+  font-weight:600;
+  transition:.3s;
+  background:rgba(91,140,255,.12);
+  color:#5b8cff;
+  border:1px solid rgba(91,140,255,.3);
+  padding:12px 18px;
+  border-radius:12px;
+}
+
+/*======================================
+        RESPONSIVE DESIGN
+======================================*/
+
+
+
+
+/* ---------- Tablets ---------- */
+@media(max-width:900px){
+  
+  nav {
+    display: none;
+  }
+  .hero {
+    padding: 20px 0px;
+  }
+  .recent-projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- Phones ---------- */
+
+@media (max-width:600px){
+  
+  .container {
+    width: 94%;
+  }
+  .logo {
+    height: 50px;
+  }
+  
+  
+  
+  .btn {
+    display: none;
+  }
+  
+  .content-grid {
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+  
+  .image {
+    display: none;
+  }
+  
+  .buttons {
+    justify-content: center;
+  }
+  
+  a {
+    font-size:.9rem;
+  }
+  
+  .hero p, .section-heading p {
+    font-size: 1rem;
+  }
+  
+  .recent-projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-content {
+    padding: 12px;
+  }
+  
+  .project-content p{
+    font-size: .9rem;
+  }
+  
+  .view-more-projects {
+    justify-content: center;
+    padding: 12px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+}
+
