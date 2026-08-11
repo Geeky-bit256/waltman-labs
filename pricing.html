@@ -10,37 +10,43 @@
     href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
+    href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
   </head>
   <body>
     <header>
-      <div class="container nav">
+      <nav class="container">
         <img src="images/WaltmanLogo.png" class="logo">
         
-        <nav>
-          <a href="/">Home</a>
-          <a href="/services">Services</a>
-          <a href="/projects">Projects</a>
-          <a href="/pricing" class="active">Pricing</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-        </nav>
+        <ul class="nav-links" id="navMenu">
+          
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/pricing" class="active">Pricing</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
 
-        <a href="/contact" class="btn">Let's Talk<i class="fas fa-arrow-right"></i>
+        <a href="/contact" class="btn">
+            Let's Talk
+            <i class="fas fa-arrow-up-right-from-square"></i>
         </a>
+      
+        <button class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+        </button>
 
-      </div>
+      </nav>
     </header>
+    
     
     <section class="hero">
       <div class="container hero-content">
-        <span class="small-title">SIMPLE PRICING</span>
+      
         <h1>Clear Pricing For Every Business.</h1>
         <p>Whether you need a landing page, a complete business website, or help fixing bugs, we've got a package that fits your needs.</p>
         
@@ -57,22 +63,24 @@
             <div class="icon"><i class="fas fa-window-maximize"></i></div>
             
             <h2>Landing Page</h2>
-            <h3>From R1,500</h3>
+            <h3>From R1,200</h3>
             <p>Perfect for startups, events and businesses that need a single professional page.</p>
             
             <ul>
-              <li>Responsive Design</li>
-              <li>WhatsApp Button</li>
-              <li>Contact Form</li>
-              <li>Basic SEO</li>
-              <li>Fast Loading</li>
+              <li><i class="fas fa-check-circle"></i>Responsive Design</li>
+              <li><i class="fas fa-check-circle"></i>Basic SEO</li>
+              <li><i class="fas fa-check-circle"></i>WhatsApp Button</li>
+              <li><i class="fas fa-check-circle"></i>Fast Loading</li>
+              <li><i class="fas fa-check-circle"></i>Up to 2 pages</li>
+              <li><i class="fas fa-check-circle"></i>Delivery: 1-3 days</li>
+              
             </ul>
             
             <a href="/contact" class="card-btn">Get Started</a>
           </div>
           
           <!-- Business Website -->
-          <div class="price-card featured">
+          <div class="price-card">
           
             <div class="popular">MOST POPULAR</div>
           
@@ -80,16 +88,17 @@
           
             <h2>Business Website</h2>
           
-            <h3>From R3,500</h3>
+            <h3>From R2,500</h3>
           
             <p>Ideal for companies needing multiple pages and a stronger online presence.</p>
           
             <ul>
-              <li>Up To 5 Pages</li>
-              <li>Responsive Design</li>
-              <li>Contact Forms</li>
-              <li>Gallery</li>
-              <li>Basic SEO</li>
+              <li><i class="fas fa-check-circle"></i>Responsive Design</li>
+              <li><i class="fas fa-check-circle"></i>Basic SEO</li>
+              <li><i class="fas fa-check-circle"></i>WhatsApp Button</li>
+              <li><i class="fas fa-check-circle"></i>WhatsApp Button</li>
+              <li><i class="fas fa-check-circle"></i>Up to 5 pages</li>
+              <li><i class="fas fa-check-circle"></i>Delivery: 2-5 days</li>
             </ul>
           
             <a href="/contact" class="card-btn">Get Started</a>
@@ -107,11 +116,15 @@
             <p>Need help fixing HTML, CSS, JavaScript, React or Node.js issues?</p>
           
             <ul>
-              <li>UI Fixes</li>
-              <li>Responsive Issues</li>
-              <li>React Bugs</li>
-              <li>Node.js Fixes</li>
-              <li>Performance</li>
+              
+              <li><i class="fas fa-check-circle"></i>UI Fixes</li>
+              
+              <li><i class="fas fa-check-circle"></i>React Bugs</li>
+            
+              <li><i class="fas fa-check-circle"></i>Node.js Fixes</li>
+              <li><i class="fas fa-check-circle"></i>Performance</li>
+              <li><i class="fas fa-check-circle"></i>Delivery: 1-3 days</li>
+              
             </ul>
           
             <a href="/contact" class="card-btn">Request Help</a>
@@ -139,23 +152,7 @@
             <p>From R150 / year</p>
           </div>
           
-          <div class="cost-card">
-            <i class="fas fa-server"></i>
-            <h3>Website Hosting</h3>
-            <p>From R120 / month</p>
-          </div>
-          
-          <div class="cost-card">
-            <i class="fas fa-envelope"></i>
-            <h3>Business Email</h3>
-            <p>Optional</p>
-          </div>
 
-          <div class="cost-card">
-            <i class="fas fa-shield-halved"></i>
-            <h3>SSL Certificate</h3>
-            <p>Usually Included</p>
-          </div>
           
         </div>
         
@@ -278,8 +275,11 @@
       <div class="container footer">
         
         <div>
-          <h3>&lt;WL/&gt;</h3>
+          <h3>Waltman Labs</h3>
           <p>Building modern websites, landing pages and web solutions for businesses.</p>
+        </div>
+        <div>
+          <!-- Need social icons here-->
         </div>
 
         <p>© 2026 Waltman Labs. All Rights Reserved.</p>
@@ -287,6 +287,7 @@
       </div>
 
     </footer>
-
+    
+    <script src="js/index.js"></script>
   </body>
 </html>

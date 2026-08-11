@@ -7,9 +7,6 @@
 /*======================================
             RESET
 ======================================*/
-section {
-  border: 1px solid red;
-}
 *{
   margin:0;
   padding:0;
@@ -40,8 +37,6 @@ ul{
 .container{
   width:min(1200px,90%);
   margin:auto;
-  border: 1px solid white;
-
 }
 
 /*======================================
@@ -49,41 +44,50 @@ ul{
 ======================================*/
 
 header{
-  position:sticky
-  top:0
-  z-index:999
-  background:rgba(7,7,7,.95)
-  backdrop-filter:blur(15px)
+  padding: .5rem 0;
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(7,7,7,.95);
+  backdrop-filter:blur(15px);
   border-bottom:1px solid #1b1b1b;
-
 }
 
-.nav{
+nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-
 }
+
+.nav-links{
+  display:flex;
+  gap:40px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:#9d9d9d;
+  transition:.3s;
+}
+
+.nav-links a:hover, .nav-links a.active{
+  color:#fff;
+}
+
 
 .logo {
   height: 80px;
 } 
 
-nav{
-  display:flex
-  gap:35px;
-
+.hamburger{
+  display:none;
+  background:none;
+  border:none;
+  color:white;
+  font-size:2rem;
+  cursor:pointer;
 }
 
-nav a{
-  color:#9f9f9f;
-  transition:.3s;
-
-}
-
-nav a:hover, nav a.active{
-  color:#fff;
-}
 
 .btn{
   display:inline-flex;
@@ -117,7 +121,7 @@ nav a:hover, nav a.active{
   font-size:.9rem
   font-weight:700
   letter-spacing:3px
-  margin-bottom:20px;
+  margin-bottom:25px;
 
 }
 
@@ -178,9 +182,6 @@ nav a:hover, nav a.active{
   border-color:#5b8cff;
 }
 
-.price-card.featured{
-  border:2px solid #5b8cff;
-}
 
 .popular{
   position:absolute;
@@ -263,7 +264,16 @@ icon{
 }
 
 .price-card li{
+  font-size: .9rem;
   color:#d0d0d0;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.price-card li i{
+  color:#5b8cff;
+  font-size:1rem;
 }
 
 .card-btn{
@@ -396,7 +406,9 @@ icon{
 
 .care-card li{
   color:#d0d0d0;
+  
 }
+
 
 /*======================================
                 FAQ
@@ -509,8 +521,31 @@ footer{
 
 @media (max-width:900px){
 
-  nav {
-    display: none;
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+    padding:30px 0;
+    background:#111;
+    transform:translateY(-100%);
+    opacity:0;
+    visibility:hidden;
+  }
+  
+  .nav-links.active{
+    display: flex;
+    transform:translateY(0);
+    opacity:1;
+    visibility:visible;
+  }
+  
+  .hamburger{
+    display:block;
   }
   
   .hero,
@@ -558,6 +593,7 @@ footer{
     text-align:center;
     
   }
+}
 
 /* ---------- Phones ---------- */
 
@@ -573,6 +609,10 @@ footer{
   
   .btn {
     display: none;
+  }
+  
+  a {
+    font-size:.9rem;
   }
   
   .hero h1{

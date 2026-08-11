@@ -23,16 +23,8 @@ body{
   color:white;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-  
-}
-section {
-  border: 1px solid red;
-}
+
 .container{
-  border: 1px solid white;
   width:min(1200px,90%);
   margin:auto;
 }
@@ -42,6 +34,7 @@ section {
 
 
 header{
+  padding: .5rem 0;
   position:sticky;
   top:0;
   z-index:999;
@@ -55,28 +48,28 @@ header{
 } 
 
 
-.nav{
+nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
 
-nav{
+.nav-links{
   display:flex;
-  gap:35px;
-
+  gap:40px;
+  list-style:none;
 }
 
-nav a{
+.nav-links a{
   color:#9d9d9d;
   transition:.3s;
+  text-decoration:none;
 
 }
 
-nav a:hover, nav a.active{
+.nav-links a:hover, .nav-links a.active{
   color:#fff;
-
 }
 
 .btn{
@@ -92,13 +85,21 @@ nav a:hover, nav a.active{
 
 }
 
+.hamburger{
+  display:none;
+  background:none;
+  border:none;
+  color:white;
+  font-size:2rem;
+  cursor:pointer;
+}
+
+
 .hero {
-  border: 1px solid white;
   padding: 90px 0px;
 }
 
 .content-grid{
-  border: 1px solid white;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -219,7 +220,6 @@ nav a:hover, nav a.active{
   padding:28px;
   display:flex;
   flex-direction:column;
-  /*What is the flex purpose?*/
   flex:1;
 }
 .tag{
@@ -233,7 +233,6 @@ nav a:hover, nav a.active{
   font-size:.8rem;
   font-weight:600;
   margin-bottom:18px;
-
 }
 
 .project-content h2{
@@ -246,8 +245,6 @@ nav a:hover, nav a.active{
   color:#ababab;
   line-height:1.8;
   margin-bottom:28px;
-  
-  /*Why flex ?*/
   flex:1;
 
 }
@@ -260,7 +257,7 @@ nav a:hover, nav a.active{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:20px; /*what is gap for?*/
+  gap:20px; 
   border-top:1px solid #202020;
   padding-top:20px;
 }
@@ -269,7 +266,6 @@ nav a:hover, nav a.active{
   display:block;
   color:#7f7f7f;
   margin-bottom:6px;
-
 }
 
 .project-footer h4{
@@ -299,7 +295,6 @@ nav a:hover, nav a.active{
   padding: 28px;
   display: flex;
   justify-content: flex-end;
-
 }
 
 .view-more-projects a {
@@ -316,6 +311,67 @@ nav a:hover, nav a.active{
   border-radius:12px;
 }
 
+
+footer {
+
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 1rem;
+}
+
+.footer-grid h3 {
+  margin-bottom: .9rem;
+  color: #5b8cff;
+}
+.footer-grid p {
+  color: #9d9d9d;
+}
+
+.footer-grid .social-links {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.footer-grid .social-links i{
+  color: white;
+  font-size: 1.5rem;
+  
+}
+
+.footer-nav-links ul {
+  list-style: none;
+}
+
+.footer-nav-links a {
+  text-decoration: none;
+  color: white;
+}
+.footer-grid .contact a, small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-grid .contact i {
+  font-size: 1.5rem;
+}
+.footer-grid .contact small i {
+  font-size: .9rem;
+}
+footer small {
+  color:#8f8f8f;
+}
+
 /*======================================
         RESPONSIVE DESIGN
 ======================================*/
@@ -326,33 +382,64 @@ nav a:hover, nav a.active{
 /* ---------- Tablets ---------- */
 @media(max-width:900px){
   
-  nav {
-    display: none;
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+    padding:30px 0;
+    background:#111;
+    transform:translateY(-100%);
+    opacity:0;
+    visibility:hidden;
   }
+  
+  .nav-links.active{
+    display: flex;
+    transform:translateY(0);
+    opacity:1;
+    visibility:visible;
+  }
+  
+  .hamburger{
+    display:block;
+  }
+  
   .hero {
     padding: 20px 0px;
   }
-  .recent-projects-grid {
+  .recent-projects-grid, .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+  
+
+  
+
 }
 
 /* ---------- Phones ---------- */
 
+  
+  
 @media (max-width:600px){
+  
   
   .container {
     width: 94%;
   }
+  
   .logo {
     height: 50px;
   }
-  
-  
-  
+
   .btn {
     display: none;
   }
+  
   
   .content-grid {
     text-align: center;
@@ -375,7 +462,7 @@ nav a:hover, nav a.active{
     font-size: 1rem;
   }
   
-  .recent-projects-grid {
+  .recent-projects-grid, .footer-grid {
     grid-template-columns: 1fr;
   }
   
@@ -392,12 +479,13 @@ nav a:hover, nav a.active{
     padding: 12px;
   }
   
+  footer {
+    text-align: center;
+  }
   
-  
-  
-  
-  
-  
+  .footer-grid h3 {
+    margin-bottom: .5rem;
+  }
   
 }
 
