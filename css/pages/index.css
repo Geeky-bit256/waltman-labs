@@ -1,98 +1,5 @@
 
-/*======================================
-        GOOGLE FONT
-======================================*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-/*======================================
-            RESET
-======================================*/
-
-
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,sans-serif;
-}
-
-body{
-  background:#080808;
-  color:white;
-}
-
-
-.container{
-  width:min(1200px,90%);
-  margin:auto;
-}
-/*======================================
-            HEADER
-======================================*/
-
-
-header{
-  padding: .5rem 0;
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(7,7,7,.94);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid #171717;
-}
-
-.logo {
-  height: 80px;
-} 
-
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-
-.nav-links{
-  display:flex;
-  gap:40px;
-  list-style:none;
-}
-
-.nav-links a{
-  color:#9d9d9d;
-  transition:.3s;
-  text-decoration:none;
-
-}
-
-.nav-links a:hover, .nav-links a.active{
-  color:#fff;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:#5b8cff;
-  color:#fff;
-  padding:15px 24px;
-  border-radius:14px;
-  font-weight:600;
-  transition:.3s;
-
-}
-
-.hamburger{
-  display:none;
-  background:none;
-  border:none;
-  color:white;
-  font-size:2rem;
-  cursor:pointer;
-}
 
 
 .hero {
@@ -311,135 +218,29 @@ nav{
   border-radius:12px;
 }
 
-
-footer {
-
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-bottom: 1rem;
-}
-
-.footer-grid h3 {
-  margin-bottom: .9rem;
-  color: #5b8cff;
-}
-.footer-grid p {
-  color: #9d9d9d;
-}
-
-.footer-grid .social-links {
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 1.5rem;
-}
-.footer-grid .social-links i{
-  color: white;
-  font-size: 1.5rem;
-  
-}
-
-.footer-nav-links ul {
-  list-style: none;
-}
-
-.footer-nav-links a {
-  text-decoration: none;
-  color: white;
-}
-.footer-grid .contact a, small {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: inherit;
-  text-decoration: none;
-}
-
-.footer-grid .contact i {
-  font-size: 1.5rem;
-}
-.footer-grid .contact small i {
-  font-size: .9rem;
-}
-footer small {
-  color:#8f8f8f;
-}
-
 /*======================================
         RESPONSIVE DESIGN
 ======================================*/
 
-
-
-
 /* ---------- Tablets ---------- */
 @media(max-width:900px){
-  
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:80px;
-    left:0;
-    width:100%;
-    flex-direction:column;
-    align-items:center;
-    gap:25px;
-    padding:30px 0;
-    background:#111;
-    transform:translateY(-100%);
-    opacity:0;
-    visibility:hidden;
-  }
-  
-  .nav-links.active{
-    display: flex;
-    transform:translateY(0);
-    opacity:1;
-    visibility:visible;
-  }
-  
-  .hamburger{
-    display:block;
-  }
   
   .hero {
     padding: 20px 0px;
   }
-  .recent-projects-grid, .footer-grid {
+  .recent-projects-grid {
     grid-template-columns: 1fr 1fr;
   }
-  
-
-  
 
 }
 
 /* ---------- Phones ---------- */
-
-  
-  
 @media (max-width:600px){
   
   
   .container {
     width: 94%;
   }
-  
-  .logo {
-    height: 50px;
-  }
-
-  .btn {
-    display: none;
-  }
-  
   
   .content-grid {
     text-align: center;
@@ -462,7 +263,7 @@ footer small {
     font-size: 1rem;
   }
   
-  .recent-projects-grid, .footer-grid {
+  .recent-projects-grid{
     grid-template-columns: 1fr;
   }
   
@@ -479,13 +280,7 @@ footer small {
     padding: 12px;
   }
   
-  footer {
-    text-align: center;
-  }
   
-  .footer-grid h3 {
-    margin-bottom: .5rem;
-  }
   
 }
 

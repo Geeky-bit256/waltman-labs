@@ -1,0 +1,108 @@
+
+/*======================================
+        FOOTER
+======================================*/
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 1rem;
+}
+
+.footer-grid h3 {
+  margin-bottom: .9rem;
+  color: #5b8cff;
+}
+.footer-grid p {
+  color: #9d9d9d;
+}
+
+.footer-grid .contact, .footer-grid .walmanlabs-info {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.footer-grid .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+
+.footer-grid .social-links i{
+  color: white;
+  font-size: 1.5rem;
+}
+
+.footer-nav-links ul {
+  list-style: none;
+}
+
+.footer-nav-links a {
+  text-decoration: none;
+  color: white;
+}
+.footer-grid .contact a, .walmanlabs-info a, small {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-grid .contact i {
+  font-size: 1.5rem;
+}
+.footer-grid .contact small i {
+  font-size: .9rem;
+}
+footer small {
+  color:#8f8f8f;
+}
+footer .copyright {
+  display: flex;
+  justify-content: center;
+}
+
+
+/*======================================
+        RESPONSIVE DESIGN
+======================================*/
+
+/* ---------- Tablets ---------- */
+@media(max-width:900px){
+  
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+/* ---------- Phones ---------- */
+@media (max-width:600px){
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  footer {
+    text-align: center;
+  }
+  
+  .footer-grid h3 {
+    margin-bottom: .5rem;
+  }
+  
+  .footer-grid .contact, .footer-grid .walmanlabs-info {
+    align-items: center;
+    
+  }
+
+  .footer-grid .social-links {
+    justify-content: center;
+  }
+}

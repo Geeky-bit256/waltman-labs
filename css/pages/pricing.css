@@ -1,108 +1,6 @@
-/*======================================
-        GOOGLE FONT
-======================================*/
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-/*======================================
-            RESET
-======================================*/
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:"Inter",sans-serif;
-  background:#070707;
-  color:#fff;
-  overflow-x:hidden;
-
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
 
 ul{
   list-style:none;
-}
-
-.container{
-  width:min(1200px,90%);
-  margin:auto;
-}
-
-/*======================================
-            HEADER
-======================================*/
-
-header{
-  padding: .5rem 0;
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(7,7,7,.95);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid #1b1b1b;
-}
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.nav-links{
-  display:flex;
-  gap:40px;
-  list-style:none;
-}
-
-.nav-links a{
-  color:#9d9d9d;
-  transition:.3s;
-}
-
-.nav-links a:hover, .nav-links a.active{
-  color:#fff;
-}
-
-
-.logo {
-  height: 80px;
-} 
-
-.hamburger{
-  display:none;
-  background:none;
-  border:none;
-  color:white;
-  font-size:2rem;
-  cursor:pointer;
-}
-
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:#5b8cff;
-  color:#fff;
-  padding:15px 24px;
-  border-radius:14px;
-  font-weight:600;
-  transition:.3s;
-}
-
-.btn:hover{
-  transform:translateY(-4px);
 }
 
 /*======================================
@@ -122,7 +20,6 @@ nav{
   font-weight:700
   letter-spacing:3px
   margin-bottom:25px;
-
 }
 
 .hero h1{
@@ -480,37 +377,6 @@ icon{
 
 }
 
-/*======================================
-              FOOTER
-======================================*/
-
-footer{
-  border-top:1px solid #1b1b1b;
-  padding:35px 0;
-
-}
-
-.footer{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:30px;
-  flex-wrap:wrap;
-
-}
-
-.footer h3{
-  color:#5b8cff;
-  font-size:1.5rem;
-  margin-bottom:10px;
-
-}
-
-.footer p{
-  color:#8f8f8f;
-  line-height:1.7;
-
-}
 
 /*======================================
         RESPONSIVE DESIGN
@@ -520,33 +386,6 @@ footer{
 /* ---------- Tablets ---------- */
 
 @media (max-width:900px){
-
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:80px;
-    left:0;
-    width:100%;
-    flex-direction:column;
-    align-items:center;
-    gap:25px;
-    padding:30px 0;
-    background:#111;
-    transform:translateY(-100%);
-    opacity:0;
-    visibility:hidden;
-  }
-  
-  .nav-links.active{
-    display: flex;
-    transform:translateY(0);
-    opacity:1;
-    visibility:visible;
-  }
-  
-  .hamburger{
-    display:block;
-  }
   
   .hero,
   .pricing,
@@ -585,14 +424,8 @@ footer{
   }
   .cta-box h2{
     font-size:2rem;
-    
   }
-  
-  .footer{
-    flex-direction:column;
-    text-align:center;
-    
-  }
+
 }
 
 /* ---------- Phones ---------- */
@@ -601,18 +434,6 @@ footer{
   
   .container {
     width: 94%;
-  }
-  
-  .logo {
-    height: 50px;
-  }
-  
-  .btn {
-    display: none;
-  }
-  
-  a {
-    font-size:.9rem;
   }
   
   .hero h1{
@@ -625,10 +446,7 @@ footer{
   
   .pricing-grid{
     grid-template-columns:1fr;
-    
   }
-  
-
   
   .cost-grid{
     grid-template-columns:1fr;
@@ -636,17 +454,14 @@ footer{
   
   .price-card, .care-card, .cost-card{
     padding:12px;
-    
   }
   
   .section-heading h2{
     font-size:2rem;
-    
   }
   
   .section-heading p{
     font-size:.95rem;
-    
   }
   
   .price-card h2{
@@ -682,11 +497,6 @@ footer{
     font-size:.95rem;
   }
   
-  .footer p{
-    text-align:center;
-    font-size:.9rem;
-    
-  }
 
   
 }

@@ -1,32 +1,4 @@
-/*======================================
-        GOOGLE FONT
-======================================*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-
-/*======================================
-            RESET
-======================================*/
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:"Inter",sans-serif;
-  background:#070707;
-  color:#fff;
-  overflow-x:hidden;
-  border: 1px solid white;
-
-}
 
 a{
   text-decoration:none;
@@ -41,80 +13,9 @@ button{
 .container{
   width:min(1200px,90%);
   margin:auto;
-  
 
 }
 
-/*======================================
-            HEADER
-======================================*/
-
-header{
-  padding: .5rem 0;
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(7,7,7,.95);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid #18b1b1b;
-}
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.nav-links{
-  display:flex;
-  gap:40px;
-  list-style:none;
-}
-
-.nav-links a{
-  color:#9d9d9d;
-  transition:.3s;
-}
-
-.nav-links a:hover, .nav-links a.active{
-  color:#fff;
-}
-
-
-.logo {
-  height: 80px;
-} 
-
-.hamburger{
-  display:none;
-  background:none;
-  border:none;
-  color:white;
-  font-size:2rem;
-  cursor:pointer;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:#5b8cff;
-  color:#fff;
-  padding:15px 24px;
-  border-radius:14px;
-  font-weight:600;
-  transition:.3s;
-
-}
-
-
-.btn:hover{
-  transform:translateY(-3px);
-}
-
-.btn i{
-  font-size:.9rem;
-}
 
 /*======================================
             HERO
