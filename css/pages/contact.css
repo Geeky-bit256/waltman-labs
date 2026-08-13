@@ -5,15 +5,10 @@
 ========================== */
 
 .contact-waltmanlabs{
-  /*border: 1px solid blue;*/
-  min-height:100vh;
   padding:80px 7%;
-  
 }
 
 .contact-wrapper{
-  /*border: 1px solid yellow;*/
-  
   max-width:1500px;
   display:flex;
   gap:70px;
@@ -25,7 +20,6 @@
 ========================== */
 
 .contact-left{
-  /*border: 1px solid white;*/
   flex: 1;
   display:flex;
   flex-direction:column;
@@ -68,7 +62,6 @@
 ========================== */
 
 .services{
-  /*border: 1px solid white;*/
   display:flex;
   flex-direction:column;
   gap:28px;
@@ -76,7 +69,6 @@
 }
 
 .service{
-  /*border: 1px solid white;*/
   display:flex;
   gap:22px;
   align-items:flex-start;
@@ -96,8 +88,8 @@
   font-size:22px;
   flex-shrink:0;
   transition:.35s;
-
 }
+
 .service:hover .icon{
   background:#5b8cff;
   color:#fff;
@@ -112,7 +104,6 @@
 .service p{
   color:#9c9c9c;
   line-height:1.7;
-  
 }
 
 /* ==========================
@@ -121,7 +112,6 @@
 
 .contact-right{
   flex: 1;
-  /*border: 1px solid blue;*^
 }
 
 .contact-card{
@@ -142,8 +132,6 @@
 ========================== */
 
 .form-side{
-  /*border: 1px solid white;*/
-  
   padding:60px;
 }
 
@@ -153,7 +141,6 @@
 }
 
 form{
-  /*border: 1px solid white;*/
   display:flex;
   flex-direction:column;
   gap:18px;
@@ -187,7 +174,7 @@ form input::placeholder, form textarea::placeholder{
 
 }
 
-/*button{
+form button{
   margin-top:10px;
   border:none;
   background:#5b8cff;
@@ -200,14 +187,14 @@ form input::placeholder, form textarea::placeholder{
   transition:.35s;
 }
 
-button:hover{
+form button:hover{
   transform:translateY(-3px);
   background:#6c98ff;
 }
 
-button i{
+form button i{
   margin-left:10px;
-}*/
+}
 
 
 /* ==========================
@@ -215,13 +202,10 @@ button i{
 ========================== */
 
 .contact-info {
-  /*border: 1px solid white;*/
   display: flex;
-  
   justify-content: center;
 }
 .contact-info > div{
-  /*border: 1px solid red;*/
   margin-top:40px;
   display: flex;
   
@@ -229,10 +213,8 @@ button i{
 }
 
 .info-box{
-  
-  /*border: 1px solid white;*/
   background:#141414;
-  /*border:1px solid #222*/
+  border:1px solid #222
   border-radius:16px;
   padding:20px;
   display: flex;
@@ -285,7 +267,39 @@ button i{
 /* ---------- Tablets ---------- */
 
 @media (max-width:900px){
-
+  .contact-waltmanlabs{
+    padding:18px;
+  }
+  .contact-wrapper {
+    flex-direction: column;
+  }
+  .contact-left h1{
+    font-size:2.5rem;
+  }
+  .contact-left>p {
+    font-size:.95rem;
+  }
+  
+  .form-side{
+    padding: 12px;
+  }
+  .form-side h2{
+    font-size:1.7rem;
+  }
+  
+  .service{
+    gap:15px;
+  }
+  
+  .icon{
+    width:50px;
+    height:50px;
+    font-size:18px;
+  }
+  
+  form button{
+    width:100%;
+  }
 }
 
 /* ---------- Phones ---------- */
@@ -295,69 +309,13 @@ button i{
   .container {
     width: 94%;
   }
-
-  
-}
-
-
-
-
-/*@media(max-width:768px){
-  .contact{
-    padding:18px;
-  }
-  .contact-wrapper {
-    flex-direction: column;
-  }
-  .contact-left h1{
-    font-size:2.5rem;
-    
-  }
-  .contact-left>p {
-    font-size:.95rem;
-    
-  }
   
   .contact-info > div {
     flex-direction: column;
   }
   
-  
-  .form-side{
-    padding: 12px;
-  }
-  .form-side h2{
-    font-size:1.7rem;
-    
-  }
-
-  
-
-  .service{
-    gap:15px;
-    
-  }
-  .icon{
-    width:50px;
-    height:50px;
-    font-size:18px;
-    
-  }
-  button{
-    width:100%;
-    
-  }
-
-}
-
-/* ==========================
-   SMALL PHONES
-========================== */
-
-/*@media(max-width:480px){
-  .contact{
+  .contact-waltmanlabs{
     padding:50px 16px;
-    
   }
   .contact-left h1{
     font-size:2rem;
@@ -366,15 +324,17 @@ button i{
   .section-title{
     font-size:.8rem;
   }
+  
   .form-side{
     padding:24px 18px;
   }
+  
   .form-side h2{
     font-size:1.45rem;
   }
+  
   form input, form textarea{
     padding:16px;
-    
   }
   
-}*/
+}

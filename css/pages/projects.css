@@ -1,28 +1,9 @@
 
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-button{
-  font-family:inherit;
-}
-
-
-.container{
-  width:min(1200px,90%);
-  margin:auto;
-
-}
-
-
 /*======================================
             HERO
 ======================================*/
 
 .hero{
-  border: 1px solid red;
   padding:90px 0;
 }
 
@@ -31,7 +12,6 @@ button{
   grid-template-columns:1fr 1fr;
   gap:70px;
   align-items:center;
-
 }
 
 .small-title{
@@ -45,9 +25,10 @@ button{
 }
 
 .hero-content h1{
-  font-size:clamp(3rem,6vw,5.5rem);
-  line-height:1.05;
-  margin-bottom:24px;
+  font-size:clamp(2.8rem,5vw,4.8rem);
+  line-height:1.1;
+  margin-bottom:25px;
+  font-weight:800;
 
 }
 
@@ -57,24 +38,29 @@ button{
 }
 
 .hero-content p{
-
-    color:#a7a7a7;
-
-    line-height:1.8;
-
-    max-width:520px;
-
-    margin-bottom:40px;
-
+  color:#a7a7a7;
+  line-height:1.8;
+  max-width:520px;
+  margin-bottom:40px;
 }
 
+.hero-image{
+  display:flex;
+  justify-content:center;
+}
+
+.hero-image img{
+  width: 100%;
+  max-width:560px;
+  filter:drop-shadow(0 20px 50px rgba(0,0,0,.45));
+
+}
 
 /*======================================
             FILTERS
 ======================================*/
 
 .filters{
-  border: 1px solid blue;
   padding-bottom:70px;
 
 }
@@ -83,7 +69,6 @@ button{
   display:flex;
   gap:14px;
   flex-wrap:wrap;
-
 }
 
 .filters button{
@@ -112,9 +97,7 @@ button{
 
 
 .projects{
-  border: 1px solid yellow;
   padding:30px 0 100px;
-
 }
 
 .projects-grid{
@@ -180,7 +163,6 @@ button{
 .project-content h2{
   font-size:1.5rem;
   margin-bottom:14px;
-
 }
 
 .project-content p{
@@ -188,8 +170,8 @@ button{
   line-height:1.8;
   margin-bottom:28px;
   flex:1;
-
 }
+
 /*======================================
         PROJECT FOOTER
 ======================================*/
@@ -207,13 +189,11 @@ button{
   display:block;
   color:#7f7f7f;
   margin-bottom:6px;
-
 }
 
 .project-footer h4{
   font-size:1rem;
   font-weight:600;
-
 }
 
 .project-footer a{
@@ -237,7 +217,6 @@ button{
 ======================================*/
 
 .cta{
-  border: 1px solid red;
   padding:100px 0;
 }
 
@@ -249,20 +228,18 @@ button{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:40px; /* why gap*/
+  gap:40px;
 
 }
 
 .cta-box h2{
   font-size:2.5rem;
   margin-bottom:12px;
-
 }
 
 .cta-box p{
   color:#a9a9a9;
   line-height:1.8;
-
 }
 
 /*======================================
@@ -299,7 +276,6 @@ footer{
 ======================================*/
 
 /* ---------- Tablets ---------- */
-
 @media (max-width:900px){
 
   .nav-links{
@@ -329,32 +305,33 @@ footer{
     display:block;
   }
   
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .cta {
+    padding: 12px;
+  }
+  
+  .cta-box {
+    flex-direction: column;
+  }
 
 }
 
 
 
 /* ---------- Phones ---------- */
-
 @media (max-width:600px){
   
   .container {
     width: 94%;
   }
-  
-  .logo {
-    height: 50px;
-  }
-  
-  .btn {
-    display: none;
-  }
-  
-  a {
-    font-size:.9rem;
-  }
 
-  
   .hero-content h1{
     font-size:2.4rem;
     
@@ -367,69 +344,49 @@ footer{
   
   .hero-image img{
     max-width:320px;
-    
   }
   
-  /*I want this button to be scrollable*/
-  .filters button{
-    width:100%;
-    
+  .filters {
+    padding-bottom: 20px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
   
   .project-card{
     border-radius:18px;
-    
   }
   
   .project-card img{
     height:220px;
-    
-  }
-  .project-content{
-    padding:22px;
-    
-  }
-  .project-content h2{
-    font-size:1.3rem;
-    
   }
   
-  /*No need for column, we can still make them flex*/
+  .project-content{
+    padding:22px;
+  }
+  
+  .project-content h2{
+    font-size:1.3rem;
+  }
+  
   .project-footer{
     flex-direction:column;
     align-items:flex-start;
     gap:18px;
-    
   }
   
   .cta-box{
-    padding:30px 22px;
-    
+    text-align: center;
+    padding: 12px;
   }
   .cta-box h2{
-    font-size:1.6rem;
-    
+    font-size:1.5rem;
   }
   
-  .cta-box p{
-    font-size:.95rem;
-    
-  }
-  .footer h3{
-    font-size:1.3rem;
-    
-  }
-  
-  .footer p{
-    text-align:center
-    line-height:1.7
-    font-size:.9rem;
-
 }
 
-  
 
-}
 
 
 

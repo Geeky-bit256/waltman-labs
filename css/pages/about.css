@@ -29,10 +29,10 @@
 }
 
 .hero-content h1{
-  font-size:clamp(3rem,6vw,5.5rem);
-  line-height:1.05;
+  font-size:clamp(2.8rem,5vw,4.8rem);
+  line-height:1.1;
   margin-bottom:25px;
-
+  font-weight:800;
 }
 
 .hero-content h1 span{
@@ -78,13 +78,12 @@
 }
 
 .hero-image{
-  border: 1px solid white;
-  /*How does making it flex makes a difference*/
   display:flex;
   justify-content:center;
 }
 
 .hero-image img{
+  width: 100%;
   max-width:560px;
   filter:drop-shadow(0 20px 50px rgba(0,0,0,.45));
 
@@ -96,20 +95,14 @@
 
 .story{
   padding:90px 0;
-
 }
 
-.story-grid{
+.story-grid {
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
-
+  grid-template-columns:1fr 2fr;
+  gap:30px;
 }
 
-.story-image img{
-  border-radius:25px;
-}
 
 .section-title{
   display:inline-block;
@@ -154,6 +147,7 @@
   border:1px solid #202020;
   border-radius:24px;
   padding:40px;
+  text-align:center;
   transition:.35s;
 
 }
@@ -342,8 +336,42 @@
 /* ---------- Tablets ---------- */
 
 @media (max-width:900px){
-
   
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content h1 {
+    font-size:2.5rem;
+  }
+  
+  .story {
+    padding: 12px 0px;
+  }
+  
+  .mission {
+    padding: 12px 0px;
+  }
+  
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .cta {
+    padding: 12px;
+    margin-bottom: 60px;
+  }
+  
+  .cta-box {
+    border-radius: 16px;
+    padding: 16px;
+  }
+  
+
 }
 
 
@@ -353,7 +381,34 @@
   .container {
     width: 94%;
   }
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
   
+  .mission-card {
+    border-radius: 16px;
+    padding: 16px;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .value-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  
+  .cta-box h2{
+    font-size:1.5rem;
+    margin-bottom:20px;
+    
+  }
 
 }
 

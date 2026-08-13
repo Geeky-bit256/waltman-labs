@@ -42,7 +42,7 @@ nav{
   color:#fff;
 }
 
-.btn{
+.cta-btn{
   display:inline-flex;
   align-items:center;
   gap:10px;
@@ -55,7 +55,7 @@ nav{
 
 }
 
-.btn:hover{
+.cta-btn:hover{
   transform:translateY(-4px);
 }
 
@@ -113,7 +113,7 @@ nav{
     height: 50px;
   }
 
-  .btn {
+  .cta-btn {
     display: none;
   }
   

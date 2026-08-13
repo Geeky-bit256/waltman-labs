@@ -33,6 +33,27 @@ a{
   
 }
 
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#5b8cff;
+  color:#fff;
+  padding:15px 24px;
+  border-radius:14px;
+  font-weight:600;
+  transition:.3s;
+
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+}
+
+.btn i{
+  font-size:.9rem;
+}
+
 .container{
   width:min(1200px,90%);
   margin:auto;

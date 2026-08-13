@@ -19,7 +19,7 @@ ul{
   font-size:.9rem
   font-weight:700
   letter-spacing:3px
-  margin-bottom:25px;
+  
 }
 
 .hero h1{
@@ -54,6 +54,7 @@ ul{
 ======================================*/
 
 .pricing{
+  
   padding:90px 0;
 }
 
@@ -92,32 +93,6 @@ ul{
   font-weight:700;
 
 }
-
-
-icon{
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:18px;
-
-    background:#171717;
-
-    color:#5b8cff;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:28px;
-
-    margin-bottom:25px;
-
-}
-
 
 .icon{
   width:70px;
@@ -181,71 +156,6 @@ icon{
   padding:15px;
   border-radius:14px;
   font-weight:600;
-}
-
-/*======================================
-        WEBSITE RUNNING COSTS
-======================================*/
-
-.running-costs{
-  padding:90px 0;
-}
-
-.section-heading{
-  text-align:center;
-  margin-bottom:60px;
-
-}
-
-.section-heading h2{
-  font-size:2.8rem
-  margin:18px 0;
-
-}
-
-.section-heading p{
-  max-width:700px;
-  margin:auto;
-  color:#ababab;
-  line-height:1.8;
-}
-
-.cost-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:25px;
-}
-
-.cost-card{
-  background:#101010;
-  border:1px solid #202020;
-  border-radius:22px;
-  padding:35px;
-  text-align:center;
-  transition:.35s;
-
-}
-
-.cost-card:hover{
-  transform:translateY(-8px);
-  border-color:#5b8cff;
-}
-
-.cost-card i{
-  font-size:2rem;
-  color:#5b8cff;
-  margin-bottom:20px;
-
-}
-
-
-.cost-card h3{
-  margin-bottom:12px;
-  font-size:1.3rem;
-}
-
-.cost-card p{
-  color:#ababab;
 }
 
 /*======================================
@@ -485,7 +395,7 @@ icon{
   }
   
   .cta-box{
-    padding:30px 22px;
+    padding:16px;
     
   }
   
