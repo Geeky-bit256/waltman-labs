@@ -166,6 +166,10 @@ ul{
   padding:90px 0;
 }
 
+.section-heading {
+  text-align: center;
+}
+
 .care-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -174,6 +178,7 @@ ul{
 }
 
 .care-card{
+  
   position:relative;
   background:#101010;
   border:1px solid #202020;
@@ -188,18 +193,15 @@ ul{
   border-color:#5b8cff;
 }
 
-.care-card.featured{
-  border:2px solid #5b8cff;
-}
 
 .care-card h3{
-  font-size:1.8rem
+  font-size:1.8rem;
   margin-bottom:10px;
 }
 
 .care-card h4{
-  color:#5b8cff
-  font-size:2rem
+  color:#5b8cff;
+  font-size:2rem;
   margin-bottom:25px;
 
 }
@@ -208,12 +210,19 @@ ul{
   display:flex;
   flex-direction:column;
   gap:16px;
-
 }
 
 .care-card li{
+  font-size: .9rem;
   color:#d0d0d0;
-  
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.care-card li i{
+  color:#5b8cff;
+  font-size:1rem;
 }
 
 
