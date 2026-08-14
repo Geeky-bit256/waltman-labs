@@ -3,6 +3,14 @@ ul{
   list-style:none;
 }
 
+.section-heading {
+  text-align: center;
+}
+
+.section-heading h2{
+  margin: 20px 0;
+}
+
 /*======================================
             HERO
 ======================================*/
@@ -166,9 +174,7 @@ ul{
   padding:90px 0;
 }
 
-.section-heading {
-  text-align: center;
-}
+
 
 .care-grid{
   display:grid;
@@ -236,16 +242,32 @@ ul{
 
 .faq-list{
   display:flex;
-  flex-direction:column;
+  flex-direction: column;
   gap:25px;
 
 }
 
+
+.faq-item summary {
+  cursor: pointer;
+  padding: 24px 0;
+  font-weight: 600;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+
+
+
 .faq-item{
-  background:#101010
-  border:1px solid #202020
-  border-radius:18px
-  padding:28px
+
+  background:#101010;
+  border:1px solid #202020;
+  border-radius: 12px;
+  padding:24px
   transition:.3s;
 
 }
@@ -262,7 +284,7 @@ ul{
 .faq-item p{
   color:#ababab;
   line-height:1.8;
-
+  
 }
 
 /*======================================
@@ -401,6 +423,18 @@ ul{
   .care-card h4{
     font-size:1.8rem;
     
+  }
+  
+  .faq-list {
+    gap: 12px;
+  }
+  
+  .faq-item {
+    padding: 12px;
+  }
+  
+  .faq-item summary {
+    padding: 8px 0;
   }
   
   .cta-box{
