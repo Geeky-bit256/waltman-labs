@@ -16,7 +16,7 @@ async function loadComponent(id, file){
 function setActiveNav(){
   const currentPage = window.location.pathname;
   
-  console.log(currentPage)
+
   const currentFile = currentPage.split("/").pop() || "index.html";
   
   
@@ -25,9 +25,9 @@ function setActiveNav(){
   links.forEach(link => {
     const linkPage = link.getAttribute("href");
     
-    //console.log(`current: ${currentFile}, linkPage: ${linkPage}`)
+  
     if(currentPage.endsWith(linkPage)){
-      console.log(link, linkPage)
+    
       link.classList.add("active")
     }
   })
